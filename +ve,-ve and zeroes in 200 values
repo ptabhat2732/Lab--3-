@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    int numbers[200];
+    int i, positive = 0, negative = 0, zero = 0;
+    printf("Enter 200 numbers:\n");
+    for(i = 0; i < 200; i++)
+    {
+        scanf("%d", &numbers[i]);
+    }
+    for(i = 0; i < 200; i++)
+    {
+        if(numbers[i] > 0)
+            positive++;
+        else if(numbers[i] < 0)
+            negative++;
+        else
+            zero++;
+    }
+    printf("Count of Positive numbers = %d\n", positive);
+    printf("Count of Negative numbers = %d\n", negative);
+    printf("Count of Zeroes = %d\n", zero);
+    return 0;
+}
